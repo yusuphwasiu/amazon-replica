@@ -1,4 +1,6 @@
 from pydantic import BaseModel, EmailStr, constr
+from datetime import datetime
+from typing import Optional
 
 class UserBase(BaseModel):
     email: EmailStr
@@ -11,6 +13,35 @@ class UserCreate(UserBase):
 class User(UserBase):
     id: int
     is_active: bool = True
+
+    class Config:
+        from_attributes = True 
+
+class ProfileUpdate(BaseModel):
+    full_name: Optional[str] = None
+    phone_number: Optional[str] = None
+    address: Optional[str] = None
+
+class PasswordChange(BaseModel):
+    current_password: str
+    new_password: str
+
+class PasswordReset(BaseModel):
+    email: EmailStr
+
+class PasswordResetConfirm(BaseModel):
+    token: str
+    new_password: str
+
+class UserProfile(BaseModel):
+    id: int
+    email: EmailStr
+    username: str
+    full_name: Optional[str] = None
+    phone_number: Optional[str] = None
+    address: Optional[str] = None
+    created_at: datetime
+    updated_at: datetime
 
     class Config:
         from_attributes = True 

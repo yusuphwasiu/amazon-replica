@@ -8,6 +8,12 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "postgresql+asyncpg://user:password@localhost/user_db"
     TEST_DATABASE_URL: str = "postgresql+asyncpg://user:password@localhost/test_user_db"
     
+    # AWS Configuration
+    AWS_ACCESS_KEY_ID: str
+    AWS_SECRET_ACCESS_KEY: str
+    AWS_REGION: str = "us-east-1"
+    SES_SOURCE_EMAIL: str
+    
     class Config:
         case_sensitive = True
         env_file = ".env" 
