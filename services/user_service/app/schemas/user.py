@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr, constr
+from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime
 from typing import Optional
 
@@ -8,7 +8,7 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     # Password must be min 8 chars, max 100 chars
-    password: constr(min_length=8, max_length=100)
+    password: str = Field(min_length=8, max_length=100)
 
 class User(UserBase):
     id: int
