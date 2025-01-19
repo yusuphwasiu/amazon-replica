@@ -2,9 +2,10 @@ from typing import List
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.models.product import Product
+from app.kafka_producer import KafkaProducer
 
-# In-memory product storage for demonstration purposes
-products_db = []
+
+kafka_producer = KafkaProducer()
 
 async def list_products(db: AsyncSession) -> List[Product]:
     result = await db.execute(select(Product))
@@ -18,4 +19,5 @@ async def add_product(product: Product, db: AsyncSession) -> Product:
     db.add(product)
     await db.commit()
     await db.refresh(product)
+    await kafka_producer.send_product_update(product.id, "created")  # Send Kafka message
     return product 
