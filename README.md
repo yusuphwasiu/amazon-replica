@@ -14,6 +14,13 @@ The goal of this project is to design and implement an E-Commerce system with se
 - **Order Processing**: Handle order creation, payment integration, and status tracking.
 - **Real-Time Inventory Tracking**: Ensure accurate and up-to-date stock levels.
 
+## 🎯 Objectives
+
+- `Scalability`: Ensure that each service is independently scalable to accommodate varying workloads, allowing the system to handle spikes in traffic without affecting performance.
+- `Resilience`: Design a fault-tolerant system where each service operates independently, minimizing the impact of service failures.
+- `Real-Time Data`: Use Kafka for real-time inventory tracking, ensuring product availability is always up-to-date.
+- `Monitoring and Observability`: Implement Grafana dashboards for monitoring key metrics, such as response times, error rates, and resource usage.
+
 
 ## 📋 Table of Contents
 - [Features](#-features)
