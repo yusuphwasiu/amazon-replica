@@ -5,7 +5,15 @@
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-A modern, production-ready microservices architecture built with Python FastAPI. This project implements best practices for scalable microservices development, including containerization, API documentation, and comprehensive testing.
+## 🎯 Project Introduction
+
+The goal of this project is to design and implement an E-Commerce system with separate services. This is a modern, production-ready microservices architecture built with Python FastAPI. This project implements best practices for scalable microservices development, including containerization, API documentation, and comprehensive testing.
+
+- **User Management**: Handle user registration, authentication, and profile management.
+- **Product Catalog**: Manage products, categories, and inventory.
+- **Order Processing**: Handle order creation, payment integration, and status tracking.
+- **Real-Time Inventory Tracking**: Ensure accurate and up-to-date stock levels.
+
 
 ## 📋 Table of Contents
 - [Features](#-features)
@@ -41,7 +49,12 @@ This project uses a microservices architecture. Each service operates independen
 - **Payment Service**: Integrates with external payment gateways
 - **Notification Service**: Sends email and SMS notifications
 
-All services are containerized using Docker and orchestrated with Docker Compose.
+All services are containerized using Docker and orchestrated with Docker Compose. The system architecture will use tools such as:
+
+- **Kafka**: Used for event streaming to ensure data consistency and real-time updates.
+- **Grafana**: Utilized for monitoring service metrics and ensuring application reliability.
+- **Docker**: Enables containerization for seamless development and deployment.
+- **Kubernetes**: Provides orchestration for scalability
 
 ## 🛠️ Services
 
