@@ -84,7 +84,7 @@ Before setting up the project, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/amazon-replica.git
+   git clone https://github.com/yusuphwasiu/amazon-replica.git
    cd amazon-replica
    ```
 2. Set up environment variables: 
