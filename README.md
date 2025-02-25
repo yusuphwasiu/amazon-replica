@@ -5,7 +5,7 @@
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## 🎯 Project Introduction
+## 🎯 Project Introduction.
 
 The goal of this project is to design and implement an E-Commerce system with separate services. This is a modern, production-ready microservices architecture built with Python FastAPI. This project implements best practices for scalable microservices development, including containerization, API documentation, and comprehensive testing.
 
