@@ -68,7 +68,7 @@ class UserService:
         if not user:
             raise ValueError("User not found")
             
-        # Generate reset token
+        # Generate reset token.
         reset_token = self._generate_reset_token(user.id)
         
         # TODO: Send email with reset token
