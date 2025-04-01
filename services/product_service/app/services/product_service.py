@@ -19,5 +19,5 @@ async def add_product(product: Product, db: AsyncSession) -> Product:
     db.add(product)
     await db.commit()
     await db.refresh(product)
-    await kafka_producer.send_product_update(product.id, "created")  # Send Kafka message
+    await kafka_producer.send_product_update(product.id, "created")  # Send Kafka messages
     return product 
